@@ -1,0 +1,160 @@
+
+.btn button {
+  background: rgb(240, 101, 9);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0%;
+  margin: 0;
+  width: 100%;
+}
+
+.navcontent ul li {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+.navcontent ul li:hover {
+  background: gray;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  display: flex;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.section h4 {
+  display: block;
+  font-family: "Cookie";
+  left: 0;
+  color: gray;
+  font-size: 6rem;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 15px;
+  z-index: 1;
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.question {
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  background-color: rgb(39, 38, 38);
+  color: white;
+}
+
+.why {
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  background-color:  rgb(110, 106, 106);
+  color: white;
+}
+
+.about {
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  background-color:  rgb(228, 227, 227);
+  color: white;
+}
+.listMusic div {
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgb(39, 38, 38);
+  color: white;
+}
+
+
+.bottom {
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  background-color: rgb(39, 38, 38);
+  color: white;
+}
+
+.slides {
+  position: relative;
+}
+
+.slides .slick-prev,
+.slides .slick-next {
+  display: block;
+  scale: 200%;
+  position: absolute;
+  top: 50%;
+  z-index:1;
+}
+
+.slides .slick-prev {
+  left: 2%;
+  transform: scale(2)
+}
+
+.slides .slick-next {
+  right: 2%;
+  transform: scale(2)
+}
+
+.search {
+  position: fixed;
+  top: 75px;
+}
+
+.row {
+  height: 800px;
+  text-align: center;
+  color: white;
+  background-color: #383B3E;
+}
+
+.playlist {
+  position: relative;
+  top: 75px;
+  height: 800px;
+  color: white;
+  background: #383B3E;
+}
+.topten {
+  position: relative;
+  top: 75px;
+  height: 904px;
+  color: white;
+  background: #383B3E;
+}
+.gerne {
+  position: relative;
+  top: 75px;
+  height: 904px;
+  color: white;
+  background: #383B3E;
+}
+
+.artist {
+  position: relative;
+  top: 75px;
+  height: 904px;
+  color: white;
+  background: #383B3E;
+}
