@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavContent from './NavContent';
 import SearchField from './SearchField';
 import Login from './Login';
+import SignUp from "./SignUp"
 
 class NavBar extends Component {
     render() {
@@ -11,6 +12,7 @@ class NavBar extends Component {
               <SearchField/> 
               <NavContent/>
               <Login/>
+              <SignUp/>
             </div>
             
           </div>
