@@ -19,10 +19,7 @@ export default class SignUp extends Component {
       onCloseModal = () => {
         this.setState({ open: false });
       };
-
-    handleUserChange = event => {this.setState({ username: event.target.value })};
-    handlePasswordChange = event => {this.setState({ password: event.target.value })};
-    handleConfirmPasswordChange = event => {this.setState({ confirmPassword: event.target.value })};
+      handleChange = event => {this.setState({ [event.target.name]: event.target.value })};
     handleSubmit = (event) => {
         event.preventDefault();
         console.log("register");
@@ -54,17 +51,17 @@ export default class SignUp extends Component {
             <form onClick={this.handleSubmit}>
                 <p>
                 <label>Username
-                    <input type="text" name="this.state.username" onChange={this.handleUserChange}/>
+                    <input type="text" name="username" onChange={this.handleChange}/>
                 </label>
                 </p>
                 <p>
                 <label>Password
-                    <input type="password" name="this.state.password" onChange={this.handlePasswordChange}/>
+                    <input type="password" name="password" onChange={this.handleChange}/>
                 </label>
                 </p>
                 <p>
                 <label>Confirm Password
-                    <input type="password" name="this.state.confirmPassword" onChange={this.handleConfirmPasswordChange}/>
+                    <input type="password" name="confirmPassword" onChange={this.handleChange}/>
                 </label>
                 </p>
                 <button type="submit" className="btn btn-primary">Register</button>

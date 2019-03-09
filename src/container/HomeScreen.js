@@ -12,7 +12,9 @@ class HomeScreen extends Component {
         return (
             <div>
                 <Video/>
-                <NavBar/>
+                <NavBar 
+                onLogin={this.props.onLogin} 
+                username={this.props.username}/>
                 <FeelingQuestion/>
                 <ListMusic/>
                 <WhyReact/>

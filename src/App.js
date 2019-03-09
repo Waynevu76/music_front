@@ -1,29 +1,34 @@
 import React, { Component } from 'react';
 import './App.css';
-import Home from './container/HomeScreen';
+import HomeScreen from './container/HomeScreen';
 import axios from 'axios';
+import { BrowserRouter, Route } from "react-router-dom";
 
 class App extends Component {
   state={};
-  _onLogin = () => {
-    axios
-      .post("http://localhost:6699/api/auth", {
-        username: this.state.username, 
-        password: this.state.password
-      })
-      .then(response =>
-        this.setState({
-          username: response.data.username,
-          id: response.data.id
-        })
-      )
-      .catch(err => console.error(err));
+  _onLogin = (response) => {
+    this.setState({
+      username: response.data.username,
+      id: response.data.id
+    })
   };
   render() {
     return (
-      <div className="App">
-        <Home/>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+        <Route
+            exact
+            path="/"
+            render={props => {
+              return <HomeScreen
+                {...props}
+                username={this.state.username}
+                onLogin={this._onLogin}
+              />;
+            }}
+          />
+        </div>
+      </BrowserRouter>
     );
   }
 }

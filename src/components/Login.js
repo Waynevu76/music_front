@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Modal from 'react-responsive-modal';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom'
 
 class Login extends Component {
     constructor(props){
@@ -20,8 +22,7 @@ class Login extends Component {
         this.setState({ open: false });
     };
 
-    handleUserNameChange = event => {this.setState({ username: event.target.value })};
-    handlePasswordChange = event => {this.setState({ password: event.target.value })};    
+    handleChange = event => {this.setState({ [event.target.name]: event.target.value })};
     handleSubmit = (event) => {
         event.preventDefault();
         console.log("Login");
@@ -33,6 +34,8 @@ class Login extends Component {
             })
             .then(data => {
               console.log(data);
+              this.props.onLogin(data);
+            // this.props.history.push('/')
             })
             .catch(err => {
                 console.error(err)
@@ -41,18 +44,6 @@ class Login extends Component {
     };
 
     render() {
-        const display = this.props.username ? (
-            <div>
-              <span className="navbar-text">Welcome, {this.props.username}</span>
-            </div>
-          ) : (
-            <button
-              className="btn btn-primary btn-block"
-              onClick={this.props.onLogin}
-            >
-              Login
-            </button>
-          );
         const { open } = this.state;
         return (
             <div className='btn'>
@@ -62,12 +53,12 @@ class Login extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <p>
                         <label>Username
-                            <input type="text" name="this.state.username" onChange={this.handleUserNameChange}/>
+                            <input type="text" name="username" onChange={this.handleChange}/>
                         </label>
                         </p>
                         <p>
                         <label>Password
-                            <input type="password" name="this.state.password" onChange={this.handlePasswordChange}/>
+                            <input type="password" name="password" onChange={this.handleChange}/>
                         </label>
                         </p>
                         <button type="submit" className="btn btn-primary" >Login</button>
@@ -78,5 +69,5 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default withRouter(Login);
 
