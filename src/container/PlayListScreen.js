@@ -6,7 +6,9 @@ class PlayListScreen extends Component {
     render() {
         return (
             <div className="">
-                <NavBar/>
+                <NavBar 
+                onLogin={this.props.onLogin} 
+                username={this.props.username}/>
                 <PlayList/>
             </div>
         );

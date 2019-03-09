@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Modal from 'react-responsive-modal';
-import axios from 'axios';
+import axios from '../axios';
 import { withRouter } from 'react-router-dom';
 import { BrowserRouter, Route } from 'react-router-dom'
 
@@ -27,7 +27,7 @@ class Login extends Component {
         event.preventDefault();
         console.log("Login");
         axios
-            .post("http://localhost:6699/api/auth", 
+            .post("/api/auth", 
             { 
                 username: this.state.username, 
                 password: this.state.password

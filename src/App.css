@@ -149,6 +149,18 @@
   background: #383B3E;
 }
 
+.profile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  top: 75px;
+  height: 904px;
+  color: white;
+  background: #383B3E;
+}
+
 a {
   color: #FFF;
 }

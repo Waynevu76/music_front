@@ -6,7 +6,9 @@ class TopTenScreen extends Component {
     render() {
         return (
             <div>
-                <NavBar/>
+                <NavBar 
+                onLogin={this.props.onLogin} 
+                username={this.props.username}/>
                 <TopTen/>
             </div>
         );

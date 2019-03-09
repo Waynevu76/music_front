@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import NavContent from './NavContent';
 import SearchField from './SearchField';
 import Login from './Login';
-import SignUp from "./SignUp"
+import SignUp from "./SignUp";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 
 class NavBar extends Component {
-    
+
     render() {
       const display = this.props.username ? (
         <div>
-          <span className="navbar-text">Welcome, {this.props.username}</span>
+          <Link to='/profile' className="navbar-text" style={{color:"white"}}>Welcome, {this.props.username}</Link>
         </div>
       ) : (<div>
             <Login  onLogin={this.props.onLogin}/>
