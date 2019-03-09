@@ -21,9 +21,6 @@
   font-family: sans-serif;
   cursor: pointer;
 }
-.navcontent ul li:hover {
-  background: gray;
-}
 
 .section {
   position: relative;
@@ -54,13 +51,6 @@
   width: 100%;
 }
 
-.question {
-  text-align: center;
-  width: 100%;
-  height: 300px;
-  background-color: rgb(39, 38, 38);
-  color: white;
-}
 
 .why {
   text-align: center;
@@ -157,4 +147,67 @@
   height: 904px;
   color: white;
   background: #383B3E;
+}
+
+a {
+  color: #FFF;
+}
+a:hover {
+   color: rgb(255, 102, 0)
+}
+
+.question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  /* margin: 0 auto; */
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  background-color: rgb(39, 38, 38);
+  color: white;
+}
+.feeling {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 50%;
+ }
+
+/* Demo Stuff End -> */
+
+/* <- Magic Stuff Start */
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-1 {
+  background-color: #2F1847
+}
+
+.btn-2 {
+  background-color: #624763
+}
+
+.btn-3 {
+  background-color: #C62E65
+}
+
+.btn-4 {
+  background-color: #F9B3D1
+}
+
+.btn-5 {
+  background-color: #C849E5
 }
