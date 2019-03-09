@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class NavContent extends Component {
     render() {
         return (
             <nav className="navcontent">
                 <ul>
-                <li>Home</li>
-                    <li>Playlist</li>
-                    <li>Top 10</li>
-                    <li>Genre</li>
-                    <li>Artist</li>
+                    <li><Link to={"/"}>Home</Link></li>
+                    <li><Link to={"/playlist"}>Playlist</Link></li>
+                    <li><Link to={"/topten"}>Top 10</Link></li>
+                    <li><Link to={"/gerne"}>Genre</Link></li>
+                    <li><Link to={"/artist"}>Artist</Link></li>
                 </ul>
             </nav>
         );
