@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import HomeScreen from './container/HomeScreen';
-import axios from './axios';
+import axios from 'axios';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Artist from "./container/ArtistScreen";
 import Gerne from "./container/GerneScreen";
